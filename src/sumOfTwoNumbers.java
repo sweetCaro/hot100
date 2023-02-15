@@ -17,5 +17,5 @@ public class sumOfTwoNumbers {
         int[] nums = {2,7,11,15};
         int target = 9;
         System.out.println(Arrays.toString(twoSum(nums,target)));
-    }//打印出的是数组的样子，包括两个中括号，所以要转成string
+    }//打印出的是数组的样子，包括两个中括号，所以要转成string哦
 }
