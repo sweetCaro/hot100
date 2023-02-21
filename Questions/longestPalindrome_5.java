@@ -1,6 +1,6 @@
 public class longestPalindrome_5 {
     public static String longestPalindrome(String s){
-        //dp[i][j] and dp[i+1][j-1] 为转移方程，后者是前者去头尾的结果
+        //dp[i][j] and dp[i+1][j-1] 是状态转移方程，后者是前者去头尾的结果
         //状态转移方程 dp[i][j] = (s[i]==s[j]) and (j-i<3 or dp[i+1][j-1])
         //边界条件 j-i<3，即子串长度为2或3时不用再检查子串是否回文
         //在状态转移方程中，是从长度较短的字符串向长度较长的字符串进行转移
@@ -21,7 +21,7 @@ public class longestPalindrome_5 {
         //Converts this string to a new character array.
 
         for(int j=1;j<len;j++){//j是列，要一列一列填，所以j在外循环，从第1列开始
-            for(int i=0;i<j;i++){//填表的右上半部分
+            for(int i=0;i<j;i++){//填表的右上半部分，参考左下角的值和边界值
                 //i是行，从第0行开始读，不要读到第j行，因为dp[j][j]肯定是true
                 if(charArray[i]!=charArray[j]){
                     dp[j][i]=false;
