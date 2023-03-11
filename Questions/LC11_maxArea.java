@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-
-public class maxArea_11 {
+public class LC11_maxArea {
     public static int maxArea(int[] height){
 
 //        ArrayList<Integer> maxArea = new ArrayList<>();
