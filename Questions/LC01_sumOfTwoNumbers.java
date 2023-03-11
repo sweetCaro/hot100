@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class sumOfTwoNumbers_1 {
+public class LC01_sumOfTwoNumbers {
 
     public static int[] twoSum(int[] nums, int target){
             for(int i = 0; i < nums.length-1; i++){

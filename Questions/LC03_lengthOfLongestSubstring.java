@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class lengthOfLongestSubstring_3 {
+public class LC03_lengthOfLongestSubstring {
     /*无重复字符的最长子串*/
     public static int lengthOfLongestSubstring(String s){
         int len=0;
