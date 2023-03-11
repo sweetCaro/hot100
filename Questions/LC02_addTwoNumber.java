@@ -1,4 +1,4 @@
-public class addTwoNumber_2 {
+public class LC02_addTwoNumber {
 
     //Definition for singly-linked list.
     static class ListNode {
