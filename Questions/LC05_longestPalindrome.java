@@ -1,4 +1,4 @@
-public class longestPalindrome_5 {
+public class LC05_longestPalindrome {
     public static String longestPalindrome(String s){
         //dp[i][j] and dp[i+1][j-1] 是状态转移方程，后者是前者去头尾的结果
         //状态转移方程 dp[i][j] = (s[i]==s[j]) and (j-i<3 or dp[i+1][j-1])

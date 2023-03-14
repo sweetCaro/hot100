@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class findMedianSortedArrays_4{
+public class LC04_findMedianSortedArrays {
     public static double findMedianSortedArrays(int[] nums1,int[] nums2){
         double mid = 0;
         int mid1;
