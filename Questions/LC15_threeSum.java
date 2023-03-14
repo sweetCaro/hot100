@@ -21,10 +21,12 @@ public class LC15_threeSum {
             target=-nums[i];
             if(i>0&&nums[i]==nums[i-1]) continue;//去重
             for(int j=i+1;j<nums.length;j++){
-                if(nums[j]==nums[j-1]&&nums[j-1]!=nums[i]) continue;//去重
+                if(j>i+1&&nums[j]==nums[j-1]) continue;//去重
+
                 for(int k=j+1;k<nums.length;k++){
-                    if(nums[k]==nums[k-1]&&nums[k-1]!=nums[j]) continue;
-                    if(nums[k]+nums[j]==target&&target!=0){
+                    if(k>j+1&&nums[k]==nums[k-1]) continue;
+
+                    if(nums[k]+nums[j]==target){
                         List<Integer> list =new ArrayList<Integer>();
                         list.add(nums[i]);
                         list.add(nums[j]);
@@ -35,20 +37,14 @@ public class LC15_threeSum {
                 }
             }
         }
-        if(nums[0]==nums[1]&&nums[0]==0){
-            List<Integer> list =new ArrayList<Integer>();
-            list.add(0);
-            list.add(0);
-            list.add(0);
-            result.add(list);
-        }
+
         //其次，当a=b时，如果枚举到(a,c,d)的情况，(b,c,d)也会被枚举到，所以要跳过相同的元素
         //即:只有和上一次枚举的元素不相同，我们才会进行枚举
 
         return result;
     }
     public static void main(String[] args){
-        int[] nums = {-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6};
+        int[] nums = {0,0,0,0};
         System.out.println(String.valueOf(threeSum(nums)));
     }
 }
