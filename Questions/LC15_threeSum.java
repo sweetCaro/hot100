@@ -17,6 +17,7 @@ public class LC15_threeSum {
         int target=0;
         for(int i=0;i<nums.length;i++){
             if(nums[i]>0)   break;//如果第一个数就比零大，后面的数值肯定也比零大，没有结果
+
             target=-nums[i];
             if(i>0&&nums[i]==nums[i-1]) continue;//去重
             for(int j=i+1;j<nums.length;j++){
