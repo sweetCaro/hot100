@@ -4,7 +4,7 @@ public class lengthOfLongestSubstring_3 {
     public static int lengthOfLongestSubstring(String s){
         int len=0;
         int tempLen=0;
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
         String temp;
         for(int i=0;i<s.length();i++){
             //先读一个字符，存进arraylist中，
@@ -13,6 +13,7 @@ public class lengthOfLongestSubstring_3 {
             //把新读到的字符存进arraylist中，再重复一样的操作
             //再次发现arraylist中有的字符时，将现在arraylist的长度和原先的tempLength作比较，谁长就把谁当作新的tempLength
             //最后返回tempLength
+
             if(!list.contains(String.valueOf(s.charAt(i)))) {
                 list.add(String.valueOf(s.charAt(i)));
                 tempLen=list.size();
