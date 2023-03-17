@@ -121,4 +121,19 @@ for(int i=0; i<nums.length; i++) {
         }
     }
 }
+```  
+最后一个点：怎样输出数组内包含数组的集合
+>[ [1,-1,0] , [2,-1,-1] ]
+
+每次都定义一个新List，把小集合中的三个元素填进去
 ```
+    List<Integer> list = new ArrayList<>();
+    list.add(nums[i]);
+    list.add(nums[j]);
+    list.add(nums[k]);
+```  
+这样就得到了```[ nums[i],nums[j],nums[k] ]```这个List，  
+然后再将这个List填进result中     
+定义result的类型：```List<List<Integer>> result = new ArrayList<>();```  
+填List进去：```result.add(list);```  
+因为result中只能装集合，不能直接填值，所以要先定义集合List，再把集合List填进result中
