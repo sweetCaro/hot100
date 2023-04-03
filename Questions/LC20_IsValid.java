@@ -9,7 +9,6 @@ public class LC20_IsValid {
             if(ch=='('||ch=='['||ch=='{'){//如果时左括号就入栈
                 stack.push(ch);
             }
-
             else{//如果是右括号
                 if(!stack.isEmpty()){//大条件：栈此时非空，里面已经存有一些左括号
                     if(ch==')'){//如果是小右括号
